@@ -1,0 +1,25 @@
+make exynos_defconfig
+make uImage LOADADDR=0x40008000 -j2
+生成的uImage在arch/arm/boot下
+
+make dtbs
+arch/arm/boot/dts/会生成tiny4412上用的设备树镜像文件exynos4412-tiny4412.dtb
+
+启动开发板，进入u-boot命令模式；
+下载uImage
+在u-boot里执行下载uImage的命令: dnw 0x40600000   (这个地址不唯一)
+
+在开发机中执行：dnw arch/arm/boot/uImage
+
+下载ramdisk
+在u-boot里执行下载uImage的命令: dnw 0x41000000   (这个地址不唯一)
+
+在开发机中执行：dnw ramdisk.img
+
+下载设备树镜像
+在u-boot里执行下载uImage的命令: dnw 0x42000000   (这个地址不唯一)
+
+在开发机中执行：dnw arch/arm/boot/dts/exynos4412-tiny4412.dtb
+
+启动内核
+使用bootm启动内核：bootm 0x40600000 0x41000000 0x42000000
