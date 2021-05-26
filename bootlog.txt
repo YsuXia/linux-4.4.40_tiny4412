@@ -1,0 +1,187 @@
+Checksum O.K.
+TINY4412 # bootm 0x40600000 0x41000000 0x42000000
+## Booting kernel from Legacy Image at 40600000 ...
+   Image Name:   Linux-4.4.40
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    4203352 Bytes = 4104 KiB
+   Load Address: 40008000
+   Entry Point:  40008000
+   Verifying Checksum ... OK
+## Loading init Ramdisk from Legacy Image at 41000000 ...
+   Image Name:   ramdisk
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    2585838 Bytes = 2525 KiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 42000000
+   Booting using the fdt blob at 0x42000000
+   Loading Kernel Image ... OK
+OK
+## Loading init Ramdisk from Legacy Image at 41000000 ...
+   Image Name:   ramdisk
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    2585838 Bytes = 2525 KiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+   Loading Ramdisk to 43a84000, end 43cfb4ee ... OK
+   Loading Device Tree to 413f2000, end 413ff535 ... OK
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0xa00
+[    0.000000] Linux version 4.4.40 (xiayang@xiayang-ThinkPad-T460p) (gcc version 4.9.4 (Linaro GCC 4.9-2017.01) ) #2 SMP PREEMPT Thu May 27 07:37:22 CST 2021
+[    0.000000] CPU: ARMv7 Processor [413fc090] revision 0 (ARMv7), cr=10c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: FriendlyARM TINY4412 board based on Exynos4412
+[    0.000000] cma: Reserved 64 MiB at 0x7bc00000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] Samsung CPU ID: 0xe4412011
+[    0.000000] PERCPU: Embedded 12 pages/cpu @ef79c000 s18816 r8192 d22144 u49152
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 260352
+[    0.000000] Kernel command line: root=/dev/ram0 rw rootfstype=ext4 console=ttySAC0,115200 init=/linuxrc earlyprintk
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 961292K/1047552K available (5734K kernel code, 239K rwdata, 2024K rodata, 432K init, 315K bss, 20724K reserved, 65536K cma-reserved, 195584K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0xc0008000 - 0xc079bb9c   (7759 kB)
+[    0.000000]       .init : 0xc079c000 - 0xc0808000   ( 432 kB)
+[    0.000000]       .data : 0xc0808000 - 0xc0843f40   ( 240 kB)
+[    0.000000]        .bss : 0xc0846000 - 0xc0894c68   ( 316 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000]  Build-time adjustment of leaf fanout to 32.
+[    0.000000]  RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    0.000000] RCU: Adjusting geometry for rcu_fanout_leaf=32, nr_cpu_ids=4
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] GIC physical location is 0x10490000
+[    0.000000] L2C: platform modifies aux control register: 0x02070000 -> 0x3e470001
+[    0.000000] L2C: platform provided aux values permit register corruption.
+[    0.000000] L2C: DT/platform modifies aux control register: 0x02070000 -> 0x3e470001
+[    0.000000] L2C-310 enabling early BRESP for Cortex-A9
+[    0.000000] L2C-310: enabling full line of zeros but not enabled in Cortex-A9
+[    0.000000] L2C-310 dynamic clock gating enabled, standby mode enabled
+[    0.000000] L2C-310 cache controller enabled, 16 ways, 1024 kB
+[    0.000000] L2C-310: CACHE_ID 0x4100c4c8, AUX_CTRL 0x4e470001
+[    0.000000] Exynos4x12 clocks: sclk_apll = 466666667, sclk_mpll = 800000000
+[    0.000000]  sclk_epll = 96000000, sclk_vpll = 108000000, arm_clk = 1400000000
+[    0.000000] Switching to timer-based delay loop, resolution 41ns
+[    0.000000] clocksource: mct-frc: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 79635851949 ns
+[    0.000003] sched_clock: 32 bits at 24MHz, resolution 41ns, wraps every 89478484971ns
+[    0.000123] Console: colour dummy device 80x30
+[    0.000136] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=120000)
+[    0.000145] pid_max: default: 32768 minimum: 301
+[    0.000214] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000221] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000579] CPU: Testing write buffer coherency: ok
+[    0.000768] CPU0: thread -1, cpu 0, socket 10, mpidr 80000a00
+[    0.000991] Setting up static identity map for 0x40008280 - 0x400082d8
+[    0.045046] CPU1: thread -1, cpu 1, socket 10, mpidr 80000a01
+[    0.060040] CPU2: thread -1, cpu 2, socket 10, mpidr 80000a02
+[    0.075041] CPU3: thread -1, cpu 3, socket 10, mpidr 80000a03
+[    0.075082] Brought up 4 CPUs
+[    0.075094] SMP: Total of 4 processors activated (192.00 BogoMIPS).
+[    0.075099] CPU: All CPU(s) started in SVC mode.
+[    0.075607] devtmpfs: initialized
+[    0.084999] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+[    0.085284] lcd0-power-domain@10023C80 has as child subdomain: tv-power-domain@10023C20.
+[    0.085652] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 9556302231375000 ns
+[    0.087696] pinctrl core: initialized pinctrl subsystem
+[    0.088473] NET: Registered protocol family 16
+[    0.089939] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.105004] cpuidle: using governor ladder
+[    0.120000] cpuidle: using governor menu
+[    0.120756] exynos-audss-clk 3810000.clock-controller: setup completed
+[    0.157108] SCSI subsystem initialized
+[    0.157482] usbcore: registered new interface driver usbfs
+[    0.157557] usbcore: registered new interface driver hub
+[    0.157637] usbcore: registered new device driver usb
+[    0.158758] Advanced Linux Sound Architecture Driver Initialized.
+[    0.159836] clocksource: Switched to clocksource mct-frc
+[    0.169255] missing cooling_device property
+[    0.169264] failed to build thermal zone cpu-thermal: -2
+[    0.169362] NET: Registered protocol family 2
+[    0.169725] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.169786] TCP bind hash table entries: 8192 (order: 5, 163840 bytes)
+[    0.169966] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.170046] UDP hash table entries: 512 (order: 2, 24576 bytes)
+[    0.170074] UDP-Lite hash table entries: 512 (order: 2, 24576 bytes)
+[    0.170220] NET: Registered protocol family 1
+[    0.170443] RPC: Registered named UNIX socket transport module.
+[    0.170450] RPC: Registered udp transport module.
+[    0.170454] RPC: Registered tcp transport module.
+[    0.170459] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.170609] Trying to unpack rootfs image as initramfs...
+[    0.170989] rootfs image is not initramfs (no cpio magic); looks like an initrd
+[    0.178054] Freeing initrd memory: 2528K (c3a84000 - c3cfc000)
+[    0.179489] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.189232] romfs: ROMFS MTD (C) 2007 Red Hat, Inc.
+[    0.189912] bounce: pool size: 64 pages
+[    0.189922] io scheduler noop registered
+[    0.189930] io scheduler deadline registered
+[    0.190107] io scheduler cfq registered (default)
+[    0.194970] dma-pl330 12680000.pdma: Loaded driver for PL330 DMAC-141330
+[    0.194980] dma-pl330 12680000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.198092] dma-pl330 12690000.pdma: Loaded driver for PL330 DMAC-141330
+[    0.198102] dma-pl330 12690000.pdma:         DBUFF-32x4bytes Num_Chans-8 Num_Peri-32 Num_Events-32
+[    0.198979] dma-pl330 12850000.mdma: Loaded driver for PL330 DMAC-141330
+[    0.198988] dma-pl330 12850000.mdma:         DBUFF-64x8bytes Num_Chans-8 Num_Peri-1 Num_Events-32
+[    0.258019] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    0.259288] 13800000.serial: ttySAC0 at MMIO 0x13800000 (irq = 44, base_baud = 0) is a S3C6400/10
+[    0.888919] console [ttySAC0] enabled
+[    0.892912] 13810000.serial: ttySAC1 at MMIO 0x13810000 (irq = 45, base_baud = 0) is a S3C6400/10
+[    0.901698] 13820000.serial: ttySAC2 at MMIO 0x13820000 (irq = 46, base_baud = 0) is a S3C6400/10
+[    0.910543] 13830000.serial: ttySAC3 at MMIO 0x13830000 (irq = 47, base_baud = 0) is a S3C6400/10
+[    0.920096] [drm] Initialized drm 1.1.0 20060810
+[    0.933693] brd: module loaded
+[    0.938338] loop: module loaded
+[    0.938959] usbcore: registered new interface driver r8152
+[    0.939063] usbcore: registered new interface driver asix
+[    0.940770] usbcore: registered new interface driver ax88179_178a
+[    0.946837] usbcore: registered new interface driver cdc_ether
+[    0.952675] usbcore: registered new interface driver smsc75xx
+[    0.958396] usbcore: registered new interface driver smsc95xx
+[    0.964109] usbcore: registered new interface driver net1080
+[    0.969751] usbcore: registered new interface driver cdc_subset
+[    0.975652] usbcore: registered new interface driver zaurus
+[    0.981237] usbcore: registered new interface driver cdc_ncm
+[    0.987114] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    0.993329] ehci-exynos: EHCI EXYNOS driver
+[    0.997592] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    1.003666] ohci-exynos: OHCI EXYNOS driver
+[    1.008086] usbcore: registered new interface driver usb-storage
+[    1.014250] mousedev: PS/2 mouse device common for all mice
+[    1.019937] s3c-rtc 10070000.rtc: failed to find rtc source clock
+[    1.025454] s3c-rtc: probe of 10070000.rtc failed with error -2
+[    1.031490] i2c /dev entries driver
+[    1.036307] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    1.043904] sdhci: Secure Digital Host Controller Interface driver
+[    1.049397] sdhci: Copyright(c) Pierre Ossman
+[    1.053836] Synopsys Designware Multimedia Card Interface Driver
+[    1.061038] usbcore: registered new interface driver usbhid
+[    1.065280] usbhid: USB HID core driver
+[    1.071347] NET: Registered protocol family 10
+[    1.074008] sit: IPv6 over IPv4 tunneling driver
+[    1.078572] NET: Registered protocol family 17
+[    1.082574] NET: Registered protocol family 15
+[    1.087130] Registering SWP/SWPB emulation handler
+[    1.092678] hctosys: unable to open rtc device (rtc0)
+[    1.109170] ALSA device list:
+[    1.109208]   No soundcards found.
+[    1.109940] RAMDISK: gzip image found at block 0
+[    1.248134] EXT4-fs (ram0): mounted filesystem with ordered data mode. Opts: (null)
+[    1.248230] VFS: Mounted root (ext4 filesystem) on device 1:0.
+[    1.248365] devtmpfs: mounted
+[    1.248650] Freeing unused kernel memory: 432K (c079c000 - c0808000)
+
+Please press Enter to activate this console. 
+[root@tiny4412 ]# 
+
